@@ -15,7 +15,6 @@ This is a simple implementation of Conway's Game of Life in Python. The game is 
 
 ## Demo
 The following video shows a demo of the game in action.
-<video width="320" height="240" controls>
-    <source src="demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+
+[![Watch the video](demo.png)](https://github.com/maryqu3en/CONWAYS-GAME-OF-LIFE/raw/master/demo.mp4
+)
