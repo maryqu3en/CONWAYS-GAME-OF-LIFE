@@ -1,0 +1,80 @@
+:root {
+    --bg-color: #0d1117;
+    --text-color: #c9d1d9;
+    --border-color: #30363d;
+    --cell-dead-color: #0d1117;
+    --cell-alive-color: #9440f3;
+    --button-bg-color: #21262d;
+    --button-hover-bg-color: #2d333b;
+    --button-active-bg-color: #444c56;
+    --button-text-color: #c9d1d9;
+    --button-border-color: #30363d;
+    --focus-shadow-color: rgba(56,139,253,0.3);
+
+    --cell-size: calc(90vw / var(--cols));
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), var(--cell-size));
+    grid-template-rows: repeat(var(--rows), var(--cell-size));
+    gap: 1px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    background-color: var(--cell-dead-color);
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    background-color: var(--cell-dead-color);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell.alive {
+    background-color: var(--cell-alive-color);
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: 1px solid var(--button-border-color);
+    padding: 8px 16px;
+    margin: 0 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+button:active {
+    background-color: var(--button-active-bg-color);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--focus-shadow-color);
+}
