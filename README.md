@@ -14,9 +14,8 @@ This is a simple implementation of Conway's Game of Life in Python. The game is 
 6. Any dead cell with more than three live neighbors stays dead.
 
 ## Demo
-![Game Of Life Demo](demo.webm)
-
+The following video shows a demo of the game in action.
 <video width="320" height="240" controls>
-    <source src="demo.webm" type="video/webm">
+    <source src="demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
